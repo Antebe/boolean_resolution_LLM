@@ -1,0 +1,4133 @@
+{
+    "model": "gpt-3.5",
+    "#_of_terms": 4,
+    "base_four": {
+        "dnf": [
+            [
+                0,
+                0,
+                0,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+            ],
+            "N and N or N or N"
+        ],
+        "cnf": [
+            [
+                0,
+                0,
+                0,
+                1,
+                0,
+                1,
+                0,
+                1,
+                0,
+                1,
+                0,
+                1,
+                0,
+                1,
+                0,
+                1
+            ],
+            " ( N  ) and (  N or N or N ) "
+        ],
+        "left": [
+            [
+                0,
+                0,
+                0,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+            ],
+            " (  (  ( N and N ) or N ) or N ) "
+        ],
+        "right": [
+            [
+                0,
+                0,
+                0,
+                1,
+                0,
+                1,
+                0,
+                1,
+                0,
+                1,
+                0,
+                1,
+                0,
+                1,
+                0,
+                1
+            ],
+            "N and  ( N or  ( N or N )  ) "
+        ]
+    },
+    "interpretation_space": {
+        "[0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]": "( ( ( N and N ) or N ) or N )",
+        "[0, 0, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1]": "( ( N and ( N or N ) ) or N )",
+        "[0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1]": "( N and ( N or N or N ) )"
+    },
+    "upper_bound": 5,
+    "experiments": {
+        "0": {
+            "nouns": [
+                "Peach",
+                "Jackfruit",
+                "Fig",
+                "Blueberry"
+            ],
+            "response": [
+                {
+                    "res": [
+                        0
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought nothing. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "0"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Fig. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Fig, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Jackfruit. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "Yes, Boris met Andre's request. 1"
+                },
+                {
+                    "res": [
+                        0
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Jackfruit, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "0"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Jackfruit, Fig. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Jackfruit, Fig, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                },
+                {
+                    "res": [
+                        0
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Fig. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "No, Boris did not meet Andre's request. 0"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Fig, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "Yes, Boris met Andre's request. Boris bought Peach, Fig, and Blueberry, which includes the requested Blueberry and Fig. Oversatisfaction is allowed, therefore the answer is 1."
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Jackfruit. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "Yes. Boris bought Peach and Jackfruit which were both part of Andre's request. Therefore, Boris met Andre's request. \n\n1"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Jackfruit, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Jackfruit, Fig. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "To determine if Boris met Andre's request, we need to compare the items Andre requested with what Boris bought. \n\nAndre asked for \"Blueberry and Fig or Jackfruit or Peach\". \n\nBoris bought Peach, Jackfruit, and Fig. \n\nSo Boris bought all the requested fruits (Peach, Jackfruit, and Fig), and even though Andre only asked for one of them, Boris oversatisfied the request by buying extra fruits.\n\nTherefore, Boris met Andre's request. \n\nThus, the answer is 1."
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Jackfruit, Fig, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "Yes, Boris met Andre's request.\n\nExplanation:\nAndre's request includes Blueberry and Fig, Jackfruit, or Peach. Boris bought Peach, Jackfruit, Fig, and Blueberry, which covers all the options that Andre requested. Therefore, Boris not only met but over-satisfied Andre's request. \n\nAnswer: 1"
+                }
+            ],
+            "model_vector": [
+                0,
+                1,
+                1,
+                1,
+                1,
+                0,
+                1,
+                1,
+                1,
+                1,
+                0,
+                1,
+                1,
+                1,
+                1,
+                1
+            ],
+            "is_results": {
+                "[0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]": {
+                    "accuracy": 0.75,
+                    "f1": 0.8461538461538461,
+                    "precision": 0.8461538461538461,
+                    "recall": 0.8461538461538461,
+                    "cosine": 0.8461538461538463
+                },
+                "[0, 0, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1]": {
+                    "accuracy": 0.625,
+                    "f1": 0.7500000000000001,
+                    "precision": 0.6923076923076923,
+                    "recall": 0.8181818181818182,
+                    "cosine": 0.7526178090063818
+                },
+                "[0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1]": {
+                    "accuracy": 0.5,
+                    "f1": 0.6,
+                    "precision": 0.46153846153846156,
+                    "recall": 0.8571428571428571,
+                    "cosine": 0.628970902033151
+                }
+            },
+            "4_base_results": {
+                "dnf": {
+                    "interpretation": "N and N or N or N",
+                    "vector": [
+                        0,
+                        0,
+                        0,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "accuracy": 0.75,
+                    "f1": 0.8461538461538461,
+                    "precision": 0.8461538461538461,
+                    "recall": 0.8461538461538461,
+                    "cosine": 0.8461538461538463
+                },
+                "cnf": {
+                    "interpretation": " ( N  ) and (  N or N or N ) ",
+                    "vector": [
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1
+                    ],
+                    "accuracy": 0.5,
+                    "f1": 0.6,
+                    "precision": 0.46153846153846156,
+                    "recall": 0.8571428571428571,
+                    "cosine": 0.628970902033151
+                },
+                "left": {
+                    "interpretation": " (  (  ( N and N ) or N ) or N ) ",
+                    "vector": [
+                        0,
+                        0,
+                        0,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "accuracy": 0.75,
+                    "f1": 0.8461538461538461,
+                    "precision": 0.8461538461538461,
+                    "recall": 0.8461538461538461,
+                    "cosine": 0.8461538461538463
+                },
+                "right": {
+                    "interpretation": "N and  ( N or  ( N or N )  ) ",
+                    "vector": [
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1
+                    ],
+                    "accuracy": 0.5,
+                    "f1": 0.6,
+                    "precision": 0.46153846153846156,
+                    "recall": 0.8571428571428571,
+                    "cosine": 0.628970902033151
+                }
+            }
+        },
+        "1": {
+            "nouns": [
+                "Peach",
+                "Jackfruit",
+                "Fig",
+                "Blueberry"
+            ],
+            "response": [
+                {
+                    "res": [
+                        0
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought nothing. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "0"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Fig. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                },
+                {
+                    "res": [
+                        0
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Fig, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "0"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Jackfruit. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                },
+                {
+                    "res": [
+                        0
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Jackfruit, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "0"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Jackfruit, Fig. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "Yes, Boris met Andre's request. Andre asked for Blueberry and Fig or Jackfruit or Peach. Boris bought Jackfruit and Fig, which includes Fig and satisfies the request. Therefore, the answer is 1."
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Jackfruit, Fig, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "Yes, Boris met Andre's request. The choices given to Boris were \"Blueberry and Fig\" or \"Jackfruit\" or \"Peach\". Boris chose \"Peach\" which was one of the options provided. Therefore, Boris met Andre's request. The number is 1."
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "Yes, Boris met Andre's request. \nAnswer: 1"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Fig. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "Yes, Boris met Andre's request. \n\nExplanation: Boris bought Peach and Fig, which are included in Andre's request. Even though Boris didn't buy Blueberry or Jackfruit, he still fulfilled the original request by purchasing two of the requested items. \n\nAnswer: 1"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Fig, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                },
+                {
+                    "res": [
+                        0
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Jackfruit. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "Yes, Boris met Andre's request. Boris bought Peach and Jackfruit, which were both options mentioned by Andre."
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Jackfruit, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Jackfruit, Fig. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "Yes, Boris met Andre's request. \n\n1"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Jackfruit, Fig, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                }
+            ],
+            "model_vector": [
+                0,
+                1,
+                1,
+                0,
+                1,
+                0,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0,
+                1,
+                1,
+                1
+            ],
+            "is_results": {
+                "[0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]": {
+                    "accuracy": 0.6875,
+                    "f1": 0.8,
+                    "precision": 0.8333333333333334,
+                    "recall": 0.7692307692307693,
+                    "cosine": 0.8006407690254358
+                },
+                "[0, 0, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1]": {
+                    "accuracy": 0.5625,
+                    "f1": 0.6956521739130435,
+                    "precision": 0.6666666666666666,
+                    "recall": 0.7272727272727273,
+                    "cosine": 0.6963106238227914
+                },
+                "[0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1]": {
+                    "accuracy": 0.4375,
+                    "f1": 0.5263157894736842,
+                    "precision": 0.4166666666666667,
+                    "recall": 0.7142857142857143,
+                    "cosine": 0.545544725589981
+                }
+            },
+            "4_base_results": {
+                "dnf": {
+                    "interpretation": "N and N or N or N",
+                    "vector": [
+                        0,
+                        0,
+                        0,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "accuracy": 0.6875,
+                    "f1": 0.8,
+                    "precision": 0.8333333333333334,
+                    "recall": 0.7692307692307693,
+                    "cosine": 0.8006407690254358
+                },
+                "cnf": {
+                    "interpretation": " ( N  ) and (  N or N or N ) ",
+                    "vector": [
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1
+                    ],
+                    "accuracy": 0.4375,
+                    "f1": 0.5263157894736842,
+                    "precision": 0.4166666666666667,
+                    "recall": 0.7142857142857143,
+                    "cosine": 0.545544725589981
+                },
+                "left": {
+                    "interpretation": " (  (  ( N and N ) or N ) or N ) ",
+                    "vector": [
+                        0,
+                        0,
+                        0,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "accuracy": 0.6875,
+                    "f1": 0.8,
+                    "precision": 0.8333333333333334,
+                    "recall": 0.7692307692307693,
+                    "cosine": 0.8006407690254358
+                },
+                "right": {
+                    "interpretation": "N and  ( N or  ( N or N )  ) ",
+                    "vector": [
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1
+                    ],
+                    "accuracy": 0.4375,
+                    "f1": 0.5263157894736842,
+                    "precision": 0.4166666666666667,
+                    "recall": 0.7142857142857143,
+                    "cosine": 0.545544725589981
+                }
+            }
+        },
+        "2": {
+            "nouns": [
+                "Peach",
+                "Jackfruit",
+                "Fig",
+                "Blueberry"
+            ],
+            "response": [
+                {
+                    "res": [
+                        0
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought nothing. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "0"
+                },
+                {
+                    "res": [
+                        0
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "Boris did not meet Andre's request because he only bought Blueberry while Andre requested Blueberry and Fig or Jackfruit or Peach. \n\nTherefore, the answer is 0."
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Fig. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Fig, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Jackfruit. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                },
+                {
+                    "res": [
+                        0
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Jackfruit, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "Yes"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Jackfruit, Fig. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "Yes, Boris met Andre's request.\n\nExplanation:\nThe request from Andre was to buy either \"Blueberry and Fig\" or \"Jackfruit\" or \"Peach\". Boris purchased \"Jackfruit\" and \"Fig\", which includes the \"Fig\" that Andre asked for. Since oversatisfaction is allowed, Boris not only fulfilled the request but also went beyond by purchasing the additional fruit. Therefore, the answer is 1."
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Jackfruit, Fig, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                },
+                {
+                    "res": [
+                        0
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Fig. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "0"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Fig, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "Yes, Boris met Andre's request by buying Peach, Fig, and Blueberry. There is no mention of oversatisfaction being disallowed, so Boris buying three options instead of just one satisfies Andre's request. \n\nAnswer: 1"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Jackfruit. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Jackfruit, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Jackfruit, Fig. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Jackfruit, Fig, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "Yes, Boris met Andre's request. The fruits Boris bought were Peach, Jackfruit, Fig, and Blueberry, which includes all the fruits Andre requested. Therefore, the answer is 1."
+                }
+            ],
+            "model_vector": [
+                0,
+                0,
+                1,
+                1,
+                1,
+                0,
+                1,
+                1,
+                1,
+                1,
+                0,
+                1,
+                1,
+                1,
+                1,
+                1
+            ],
+            "is_results": {
+                "[0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]": {
+                    "accuracy": 0.8125,
+                    "f1": 0.8799999999999999,
+                    "precision": 0.9166666666666666,
+                    "recall": 0.8461538461538461,
+                    "cosine": 0.8807048459279794
+                },
+                "[0, 0, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1]": {
+                    "accuracy": 0.6875,
+                    "f1": 0.7826086956521738,
+                    "precision": 0.75,
+                    "recall": 0.8181818181818182,
+                    "cosine": 0.7833494518006403
+                },
+                "[0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1]": {
+                    "accuracy": 0.5625,
+                    "f1": 0.631578947368421,
+                    "precision": 0.5,
+                    "recall": 0.8571428571428571,
+                    "cosine": 0.6546536707079772
+                }
+            },
+            "4_base_results": {
+                "dnf": {
+                    "interpretation": "N and N or N or N",
+                    "vector": [
+                        0,
+                        0,
+                        0,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "accuracy": 0.8125,
+                    "f1": 0.8799999999999999,
+                    "precision": 0.9166666666666666,
+                    "recall": 0.8461538461538461,
+                    "cosine": 0.8807048459279794
+                },
+                "cnf": {
+                    "interpretation": " ( N  ) and (  N or N or N ) ",
+                    "vector": [
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1
+                    ],
+                    "accuracy": 0.5625,
+                    "f1": 0.631578947368421,
+                    "precision": 0.5,
+                    "recall": 0.8571428571428571,
+                    "cosine": 0.6546536707079772
+                },
+                "left": {
+                    "interpretation": " (  (  ( N and N ) or N ) or N ) ",
+                    "vector": [
+                        0,
+                        0,
+                        0,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "accuracy": 0.8125,
+                    "f1": 0.8799999999999999,
+                    "precision": 0.9166666666666666,
+                    "recall": 0.8461538461538461,
+                    "cosine": 0.8807048459279794
+                },
+                "right": {
+                    "interpretation": "N and  ( N or  ( N or N )  ) ",
+                    "vector": [
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1
+                    ],
+                    "accuracy": 0.5625,
+                    "f1": 0.631578947368421,
+                    "precision": 0.5,
+                    "recall": 0.8571428571428571,
+                    "cosine": 0.6546536707079772
+                }
+            }
+        },
+        "3": {
+            "nouns": [
+                "Peach",
+                "Jackfruit",
+                "Fig",
+                "Blueberry"
+            ],
+            "response": [
+                {
+                    "res": [
+                        0
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought nothing. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "0"
+                },
+                {
+                    "res": [
+                        0
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "0"
+                },
+                {
+                    "res": [
+                        0
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Fig. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "0"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Fig, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Jackfruit. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Jackfruit, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                },
+                {
+                    "res": [
+                        0
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Jackfruit, Fig. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "No, Boris did not meet Andre's request. Boris bought Jackfruit and Fig, but Andre requested Blueberry and Fig or Jackfruit or Peach. Blueberry and Peach were not purchased. \n0"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Jackfruit, Fig, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Fig. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "The options Andre asked for were Blueberry and Fig or Jackfruit or Peach. However, Boris bought Peach and Fig instead. Although Boris bought one of the fruits Andre asked for (Peach), he also bought an additional fruit (Fig) which was not specifically mentioned in Andre's request. Therefore, Boris oversatisfied Andre's request.\n\nThe answer is 1."
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Fig, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                },
+                {
+                    "res": [
+                        0
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Jackfruit. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "Yes, Boris met Andre's request. \n\nExplanation:\nAndre requested either Blueberry and Fig or Jackfruit or Peach. Boris bought Peach and Jackfruit, fulfilling Andre's request as he purchased at least one of the options Andre asked for."
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Jackfruit, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                },
+                {
+                    "res": [
+                        0
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Jackfruit, Fig. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "0"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Jackfruit, Fig, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "Yes, Boris met Andre's request.\nExplanation: Boris bought Peach, Jackfruit, Fig, and Blueberry, which includes Blueberry and Fig. Hence, Andre's request was fully satisfied. \nAnswer: 1"
+                }
+            ],
+            "model_vector": [
+                0,
+                0,
+                0,
+                1,
+                1,
+                1,
+                0,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0,
+                1,
+                0,
+                1
+            ],
+            "is_results": {
+                "[0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]": {
+                    "accuracy": 0.8125,
+                    "f1": 0.8695652173913044,
+                    "precision": 1.0,
+                    "recall": 0.7692307692307693,
+                    "cosine": 0.8770580193070293
+                },
+                "[0, 0, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1]": {
+                    "accuracy": 0.8125,
+                    "f1": 0.8571428571428572,
+                    "precision": 0.9,
+                    "recall": 0.8181818181818182,
+                    "cosine": 0.8581163303210331
+                },
+                "[0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1]": {
+                    "accuracy": 0.8125,
+                    "f1": 0.8235294117647058,
+                    "precision": 0.7,
+                    "recall": 1.0,
+                    "cosine": 0.8366600265340756
+                }
+            },
+            "4_base_results": {
+                "dnf": {
+                    "interpretation": "N and N or N or N",
+                    "vector": [
+                        0,
+                        0,
+                        0,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "accuracy": 0.8125,
+                    "f1": 0.8695652173913044,
+                    "precision": 1.0,
+                    "recall": 0.7692307692307693,
+                    "cosine": 0.8770580193070293
+                },
+                "cnf": {
+                    "interpretation": " ( N  ) and (  N or N or N ) ",
+                    "vector": [
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1
+                    ],
+                    "accuracy": 0.8125,
+                    "f1": 0.8235294117647058,
+                    "precision": 0.7,
+                    "recall": 1.0,
+                    "cosine": 0.8366600265340756
+                },
+                "left": {
+                    "interpretation": " (  (  ( N and N ) or N ) or N ) ",
+                    "vector": [
+                        0,
+                        0,
+                        0,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "accuracy": 0.8125,
+                    "f1": 0.8695652173913044,
+                    "precision": 1.0,
+                    "recall": 0.7692307692307693,
+                    "cosine": 0.8770580193070293
+                },
+                "right": {
+                    "interpretation": "N and  ( N or  ( N or N )  ) ",
+                    "vector": [
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1
+                    ],
+                    "accuracy": 0.8125,
+                    "f1": 0.8235294117647058,
+                    "precision": 0.7,
+                    "recall": 1.0,
+                    "cosine": 0.8366600265340756
+                }
+            }
+        },
+        "4": {
+            "nouns": [
+                "Peach",
+                "Jackfruit",
+                "Fig",
+                "Blueberry"
+            ],
+            "response": [
+                {
+                    "res": [
+                        0
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought nothing. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "0"
+                },
+                {
+                    "res": [
+                        0
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "0"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Fig. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Fig, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1. No, Boris did not meet Andre's request because although he bought Fig and Blueberry, he did not buy Jackfruit or Peach. \n\nTherefore, the answer is 0."
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Jackfruit. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                },
+                {
+                    "res": [
+                        0
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Jackfruit, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "No, Boris did not meet Andre's request. \nThe requested items were Blueberry and Fig, Jackfruit, or Peach. However, Boris only bought Jackfruit and Blueberry, missing out on the Fig and Peach. \nTherefore, the answer is 0."
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Jackfruit, Fig. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "Yes, Boris met Andre's request. \n\nTo explain:\nAndre asked for either Blueberry and Fig or Jackfruit or Peach.\nBoris bought Jackfruit and Fig, which includes the Fig that Andre requested. Therefore, Boris fulfilled Andre's request.\n\nAnswer: 1"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Jackfruit, Fig, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "Yes\n\nBoris bought Peach and Blueberry, which were both requested by Andre. Although Boris did not buy the Fig or Jackfruit, oversatisfaction is allowed and he still met Andre's request. \n\nAnswer: 1"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Fig. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Fig, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "The request made by Andre was to buy either Blueberry and Fig, Jackfruit, or Peach. Boris bought Peach, Fig, and Blueberry. \n\nSince Boris bought both Blueberry and Fig as well as Peach, he met Andre's request and even over-satisfied it by also purchasing an additional fruit (Fig). \n\nTherefore, Boris fulfilled Andre's request. \n\nAnswer: 1"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Jackfruit. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "Yes, Boris met Andre's request because he bought Peach and Jackfruit, which were both requested by Andre. \n\n1"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Jackfruit, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "Yes, Boris met Andre's request. \n\nAnswer: 1"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Jackfruit, Fig. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Jackfruit, Fig, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                }
+            ],
+            "model_vector": [
+                0,
+                0,
+                1,
+                1,
+                1,
+                0,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+            ],
+            "is_results": {
+                "[0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]": {
+                    "accuracy": 0.875,
+                    "f1": 0.9230769230769231,
+                    "precision": 0.9230769230769231,
+                    "recall": 0.9230769230769231,
+                    "cosine": 0.9230769230769232
+                },
+                "[0, 0, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1]": {
+                    "accuracy": 0.75,
+                    "f1": 0.8333333333333333,
+                    "precision": 0.7692307692307693,
+                    "recall": 0.9090909090909091,
+                    "cosine": 0.8362420100070909
+                },
+                "[0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1]": {
+                    "accuracy": 0.5,
+                    "f1": 0.6,
+                    "precision": 0.46153846153846156,
+                    "recall": 0.8571428571428571,
+                    "cosine": 0.628970902033151
+                }
+            },
+            "4_base_results": {
+                "dnf": {
+                    "interpretation": "N and N or N or N",
+                    "vector": [
+                        0,
+                        0,
+                        0,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "accuracy": 0.875,
+                    "f1": 0.9230769230769231,
+                    "precision": 0.9230769230769231,
+                    "recall": 0.9230769230769231,
+                    "cosine": 0.9230769230769232
+                },
+                "cnf": {
+                    "interpretation": " ( N  ) and (  N or N or N ) ",
+                    "vector": [
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1
+                    ],
+                    "accuracy": 0.5,
+                    "f1": 0.6,
+                    "precision": 0.46153846153846156,
+                    "recall": 0.8571428571428571,
+                    "cosine": 0.628970902033151
+                },
+                "left": {
+                    "interpretation": " (  (  ( N and N ) or N ) or N ) ",
+                    "vector": [
+                        0,
+                        0,
+                        0,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "accuracy": 0.875,
+                    "f1": 0.9230769230769231,
+                    "precision": 0.9230769230769231,
+                    "recall": 0.9230769230769231,
+                    "cosine": 0.9230769230769232
+                },
+                "right": {
+                    "interpretation": "N and  ( N or  ( N or N )  ) ",
+                    "vector": [
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1
+                    ],
+                    "accuracy": 0.5,
+                    "f1": 0.6,
+                    "precision": 0.46153846153846156,
+                    "recall": 0.8571428571428571,
+                    "cosine": 0.628970902033151
+                }
+            }
+        },
+        "5": {
+            "nouns": [
+                "Peach",
+                "Jackfruit",
+                "Fig",
+                "Blueberry"
+            ],
+            "response": [
+                {
+                    "res": [
+                        0
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought nothing. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "0"
+                },
+                {
+                    "res": [
+                        0
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "0"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Fig. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Fig, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                },
+                {
+                    "res": [
+                        0
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Jackfruit. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "0"
+                },
+                {
+                    "res": [
+                        0
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Jackfruit, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "No, Boris did not meet Andre's request. The requested items were Blueberry and Fig or Jackfruit or Peach. Boris only bought Jackfruit and Blueberry, but did not buy Fig or Peach. Therefore, the answer is 0."
+                },
+                {
+                    "res": [
+                        0
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Jackfruit, Fig. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "No, Boris did not meet Andre's request. Boris bought Jackfruit and Fig, but Andre asked for Blueberry and Fig or Jackfruit or Peach. Since Blueberry was not purchased, the request was not fully met. \n\n0"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Jackfruit, Fig, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "Yes, Boris met Andre's request. \n\nExplanation: Boris bought all the fruits mentioned by Andre - Blueberry, Fig, and Jackfruit. Therefore, Boris has purchased 3 out of the 3 fruits that Andre requested. Since Boris not only fulfilled but also exceeded the request, the answer is 1."
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                },
+                {
+                    "res": [
+                        0
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Fig. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "No, Boris did not meet Andre's request. The items Boris bought were Peach and Fig, but Andre asked for Blueberry and Fig or Jackfruit or Peach. Blueberry was not included in the items purchased. \n\nThe answer is 0."
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Fig, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                },
+                {
+                    "res": [
+                        0
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Jackfruit. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "0"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Jackfruit, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Jackfruit, Fig. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "To determine if Boris met Andre's request, we need to compare the fruits purchased by Boris with the options listed by Andre. \n\nThe options listed by Andre are: Blueberry and Fig or Jackfruit or Peach. \n\nThe fruits purchased by Boris are: Peach, Jackfruit, Fig. \n\nAmong the options listed by Andre, Boris bought Peach and Fig, which means he fulfilled these two options. Boris also bought Jackfruit, which was also listed as an option. \n\nTherefore, Boris met Andre's request. \n\nThe answer is 1."
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Jackfruit, Fig, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "Yes, Boris met Andre's request. \n1"
+                }
+            ],
+            "model_vector": [
+                0,
+                0,
+                1,
+                1,
+                0,
+                0,
+                0,
+                1,
+                1,
+                1,
+                0,
+                1,
+                0,
+                1,
+                1,
+                1
+            ],
+            "is_results": {
+                "[0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]": {
+                    "accuracy": 0.625,
+                    "f1": 0.7272727272727274,
+                    "precision": 0.8888888888888888,
+                    "recall": 0.6153846153846154,
+                    "cosine": 0.7396002616336389
+                },
+                "[0, 0, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1]": {
+                    "accuracy": 0.75,
+                    "f1": 0.7999999999999999,
+                    "precision": 0.8888888888888888,
+                    "recall": 0.7272727272727273,
+                    "cosine": 0.8040302522073697
+                },
+                "[0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1]": {
+                    "accuracy": 0.75,
+                    "f1": 0.75,
+                    "precision": 0.6666666666666666,
+                    "recall": 0.8571428571428571,
+                    "cosine": 0.7559289460184544
+                }
+            },
+            "4_base_results": {
+                "dnf": {
+                    "interpretation": "N and N or N or N",
+                    "vector": [
+                        0,
+                        0,
+                        0,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "accuracy": 0.625,
+                    "f1": 0.7272727272727274,
+                    "precision": 0.8888888888888888,
+                    "recall": 0.6153846153846154,
+                    "cosine": 0.7396002616336389
+                },
+                "cnf": {
+                    "interpretation": " ( N  ) and (  N or N or N ) ",
+                    "vector": [
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1
+                    ],
+                    "accuracy": 0.75,
+                    "f1": 0.75,
+                    "precision": 0.6666666666666666,
+                    "recall": 0.8571428571428571,
+                    "cosine": 0.7559289460184544
+                },
+                "left": {
+                    "interpretation": " (  (  ( N and N ) or N ) or N ) ",
+                    "vector": [
+                        0,
+                        0,
+                        0,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "accuracy": 0.625,
+                    "f1": 0.7272727272727274,
+                    "precision": 0.8888888888888888,
+                    "recall": 0.6153846153846154,
+                    "cosine": 0.7396002616336389
+                },
+                "right": {
+                    "interpretation": "N and  ( N or  ( N or N )  ) ",
+                    "vector": [
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1
+                    ],
+                    "accuracy": 0.75,
+                    "f1": 0.75,
+                    "precision": 0.6666666666666666,
+                    "recall": 0.8571428571428571,
+                    "cosine": 0.7559289460184544
+                }
+            }
+        },
+        "6": {
+            "nouns": [
+                "Peach",
+                "Jackfruit",
+                "Fig",
+                "Blueberry"
+            ],
+            "response": [
+                {
+                    "res": [
+                        0
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought nothing. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "0"
+                },
+                {
+                    "res": [
+                        0
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "No, Boris did not meet Andre's request. Andre asked for Blueberry and Fig or Jackfruit or Peach, but Boris only bought Blueberry. \n\nAnswer: 0"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Fig. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                },
+                {
+                    "res": [
+                        0
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Fig, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "0"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Jackfruit. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Jackfruit, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Jackfruit, Fig. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "Yes, Boris met Andre's request. \n\nExplanation: \nAndre requested Boris to buy either Blueberry and Fig or Jackfruit or Peach. Boris bought Jackfruit and Fig, which satisfies the condition since Boris bought one of the options listed by Andre. \n\nTherefore, Boris met Andre's request, so we write 1."
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Jackfruit, Fig, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "Yes, Boris met Andre's request.\nAnswer: 1"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                },
+                {
+                    "res": [
+                        0
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Fig. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "0"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Fig, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Jackfruit. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "Yes, Boris met Andre's request. According to Andre's request, he asked for either Blueberry and Fig or Jackfruit or Peach. Boris bought Peach and Jackfruit which are both included in Andre's request. Therefore, 1."
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Jackfruit, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "Boris did meet Andre's request.\n\nExplanation:\n\nAndre's request was: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\". \n\nBoris bought Peach, Jackfruit, and Blueberry, which includes all the fruits mentioned in Andre's request. Therefore, Boris oversatisfied the request.\n\nThe answer is: 1."
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Jackfruit, Fig. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "Yes, Boris met Andre's request.\n1"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Jackfruit, Fig, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                }
+            ],
+            "model_vector": [
+                0,
+                0,
+                1,
+                0,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0,
+                1,
+                1,
+                1,
+                1,
+                1
+            ],
+            "is_results": {
+                "[0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]": {
+                    "accuracy": 0.8125,
+                    "f1": 0.8799999999999999,
+                    "precision": 0.9166666666666666,
+                    "recall": 0.8461538461538461,
+                    "cosine": 0.8807048459279794
+                },
+                "[0, 0, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1]": {
+                    "accuracy": 0.6875,
+                    "f1": 0.7826086956521738,
+                    "precision": 0.75,
+                    "recall": 0.8181818181818182,
+                    "cosine": 0.7833494518006403
+                },
+                "[0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1]": {
+                    "accuracy": 0.5625,
+                    "f1": 0.631578947368421,
+                    "precision": 0.5,
+                    "recall": 0.8571428571428571,
+                    "cosine": 0.6546536707079772
+                }
+            },
+            "4_base_results": {
+                "dnf": {
+                    "interpretation": "N and N or N or N",
+                    "vector": [
+                        0,
+                        0,
+                        0,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "accuracy": 0.8125,
+                    "f1": 0.8799999999999999,
+                    "precision": 0.9166666666666666,
+                    "recall": 0.8461538461538461,
+                    "cosine": 0.8807048459279794
+                },
+                "cnf": {
+                    "interpretation": " ( N  ) and (  N or N or N ) ",
+                    "vector": [
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1
+                    ],
+                    "accuracy": 0.5625,
+                    "f1": 0.631578947368421,
+                    "precision": 0.5,
+                    "recall": 0.8571428571428571,
+                    "cosine": 0.6546536707079772
+                },
+                "left": {
+                    "interpretation": " (  (  ( N and N ) or N ) or N ) ",
+                    "vector": [
+                        0,
+                        0,
+                        0,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "accuracy": 0.8125,
+                    "f1": 0.8799999999999999,
+                    "precision": 0.9166666666666666,
+                    "recall": 0.8461538461538461,
+                    "cosine": 0.8807048459279794
+                },
+                "right": {
+                    "interpretation": "N and  ( N or  ( N or N )  ) ",
+                    "vector": [
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1
+                    ],
+                    "accuracy": 0.5625,
+                    "f1": 0.631578947368421,
+                    "precision": 0.5,
+                    "recall": 0.8571428571428571,
+                    "cosine": 0.6546536707079772
+                }
+            }
+        },
+        "7": {
+            "nouns": [
+                "Peach",
+                "Jackfruit",
+                "Fig",
+                "Blueberry"
+            ],
+            "response": [
+                {
+                    "res": [
+                        0
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought nothing. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "0"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "The request from Andre was to buy either Blueberry and Fig, Jackfruit, or Peach. Boris bought Blueberry, which means he fulfilled part of Andre's request. However, Boris did not buy the other options (Fig, Jackfruit, or Peach). \n\nSince oversatisfaction is allowed and Boris bought at least one of the requested items, we can say that Boris met Andre's request. \n\nAnswer: 1"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Fig. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "The request was to buy Andre either Blueberry and Fig or Jackfruit or Peach. Since Boris bought Fig, he met Andre's request because Fig was one of the options mentioned. Therefore, the answer is 1."
+                },
+                {
+                    "res": [
+                        0
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Fig, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "Boris bought Fig and Blueberry, which were both part of the requested options. However, Boris did not buy Jackfruit or Peach, which were also part of Andre's request. Therefore, Boris partially met Andre's request. \n\nTo summarize: 0"
+                },
+                {
+                    "res": [
+                        0
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Jackfruit. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "0"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Jackfruit, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "Explanation: \n\nBoris bought Jackfruit and Blueberry, which are two out of the three options that Andre requested. Therefore, Boris did meet Andre's request. \n\n1 (yes)"
+                },
+                {
+                    "res": [
+                        0
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Jackfruit, Fig. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "0"
+                },
+                {
+                    "res": [
+                        0
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Jackfruit, Fig, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "No, Boris did not meet Andre's request. \n\nAnswer: 0"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "Yes, Boris met Andre's request. Boris bought Peach, which was one of the options Andre mentioned. \n\n1"
+                },
+                {
+                    "res": [
+                        0
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "0"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Fig. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "To determine if Boris met Andre's request, we need to compare the items Andre asked for (Blueberry and Fig or Jackfruit or Peach) with the items Boris bought (Peach and Fig).\n\nAndre's request: Blueberry and Fig or Jackfruit or Peach.\nBoris bought: Peach and Fig.\n\nFrom Boris' purchase, we can see that he bought Peach, which was one of the options Andre asked for. However, Boris did not buy Blueberry, Jackfruit, or any additional fruits apart from Peach and Fig.\n\nTherefore, Boris partially met Andre's request, as he bought one of the requested items (Peach). Since oversatisfaction is allowed, we can still consider this as a \"yes\" answer.\n\nAnswer: 1"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Fig, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Jackfruit. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Jackfruit, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Jackfruit, Fig. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "In this case, Boris did meet Andre's request because Boris bought Peach, which is one of the options Andre requested. \n\nTherefore, the answer is 1."
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Jackfruit, Fig, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "Yes, Boris met Andre's request.\n1"
+                }
+            ],
+            "model_vector": [
+                0,
+                1,
+                1,
+                0,
+                0,
+                1,
+                0,
+                0,
+                1,
+                0,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+            ],
+            "is_results": {
+                "[0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]": {
+                    "accuracy": 0.5625,
+                    "f1": 0.6956521739130435,
+                    "precision": 0.8,
+                    "recall": 0.6153846153846154,
+                    "cosine": 0.7016464154456235
+                },
+                "[0, 0, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1]": {
+                    "accuracy": 0.6875,
+                    "f1": 0.761904761904762,
+                    "precision": 0.8,
+                    "recall": 0.7272727272727273,
+                    "cosine": 0.7627700713964739
+                },
+                "[0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1]": {
+                    "accuracy": 0.4375,
+                    "f1": 0.47058823529411764,
+                    "precision": 0.4,
+                    "recall": 0.5714285714285714,
+                    "cosine": 0.47809144373375745
+                }
+            },
+            "4_base_results": {
+                "dnf": {
+                    "interpretation": "N and N or N or N",
+                    "vector": [
+                        0,
+                        0,
+                        0,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "accuracy": 0.5625,
+                    "f1": 0.6956521739130435,
+                    "precision": 0.8,
+                    "recall": 0.6153846153846154,
+                    "cosine": 0.7016464154456235
+                },
+                "cnf": {
+                    "interpretation": " ( N  ) and (  N or N or N ) ",
+                    "vector": [
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1
+                    ],
+                    "accuracy": 0.4375,
+                    "f1": 0.47058823529411764,
+                    "precision": 0.4,
+                    "recall": 0.5714285714285714,
+                    "cosine": 0.47809144373375745
+                },
+                "left": {
+                    "interpretation": " (  (  ( N and N ) or N ) or N ) ",
+                    "vector": [
+                        0,
+                        0,
+                        0,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "accuracy": 0.5625,
+                    "f1": 0.6956521739130435,
+                    "precision": 0.8,
+                    "recall": 0.6153846153846154,
+                    "cosine": 0.7016464154456235
+                },
+                "right": {
+                    "interpretation": "N and  ( N or  ( N or N )  ) ",
+                    "vector": [
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1
+                    ],
+                    "accuracy": 0.4375,
+                    "f1": 0.47058823529411764,
+                    "precision": 0.4,
+                    "recall": 0.5714285714285714,
+                    "cosine": 0.47809144373375745
+                }
+            }
+        },
+        "8": {
+            "nouns": [
+                "Peach",
+                "Jackfruit",
+                "Fig",
+                "Blueberry"
+            ],
+            "response": [
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought nothing. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Fig. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                },
+                {
+                    "res": [
+                        0
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Fig, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "Yes"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Jackfruit. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Jackfruit, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "Yes, Boris met Andre's request. Boris bought Jackfruit, which was one of the options Andre requested. Boris also bought Blueberry, which was another option Andre requested. Therefore, Boris bought both items that Andre asked for. \n\n1"
+                },
+                {
+                    "res": [
+                        0
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Jackfruit, Fig. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "No, Boris did not meet Andre's request completely. Boris bought Jackfruit and Fig, but he did not buy Blueberry or Peach. Thus, Boris did not satisfy Andre's request fully. The answer is 0."
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Jackfruit, Fig, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Fig. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Fig, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "Yes, Boris met Andre's request. \n\nExplanation:\nThe options Andre gave were \"Blueberry and Fig or Jackfruit or Peach\". Boris bought Peach, Fig, and Blueberry, fulfilling two out of the three options given by Andre. Since oversatisfaction is allowed, Andre's request was successfully met. \n\nThe answer is: 1."
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Jackfruit. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "Yes, Boris met Andre's request. \n\nBlueberry and Fig or Jackfruit or Peach\n\nBoris bought Peach and Jackfruit, which are both options mentioned by Andre. Therefore, Boris fulfilled Andre's request. \n\nAnswer: 1"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Jackfruit, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                },
+                {
+                    "res": [
+                        0
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Jackfruit, Fig. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "No, Boris did not meet Andre's request. Boris bought Peach, Jackfruit, and Fig, but Andre requested Blueberry and Fig or Jackfruit or Peach. Since Blueberry was not included in Boris's purchase, he did not completely meet Andre's request. Therefore, the answer is 0."
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Jackfruit, Fig, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                }
+            ],
+            "model_vector": [
+                1,
+                1,
+                1,
+                0,
+                1,
+                1,
+                0,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0,
+                1
+            ],
+            "is_results": {
+                "[0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]": {
+                    "accuracy": 0.625,
+                    "f1": 0.7692307692307693,
+                    "precision": 0.7692307692307693,
+                    "recall": 0.7692307692307693,
+                    "cosine": 0.7692307692307694
+                },
+                "[0, 0, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1]": {
+                    "accuracy": 0.625,
+                    "f1": 0.7500000000000001,
+                    "precision": 0.6923076923076923,
+                    "recall": 0.8181818181818182,
+                    "cosine": 0.7526178090063818
+                },
+                "[0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1]": {
+                    "accuracy": 0.5,
+                    "f1": 0.6,
+                    "precision": 0.46153846153846156,
+                    "recall": 0.8571428571428571,
+                    "cosine": 0.628970902033151
+                }
+            },
+            "4_base_results": {
+                "dnf": {
+                    "interpretation": "N and N or N or N",
+                    "vector": [
+                        0,
+                        0,
+                        0,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "accuracy": 0.625,
+                    "f1": 0.7692307692307693,
+                    "precision": 0.7692307692307693,
+                    "recall": 0.7692307692307693,
+                    "cosine": 0.7692307692307694
+                },
+                "cnf": {
+                    "interpretation": " ( N  ) and (  N or N or N ) ",
+                    "vector": [
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1
+                    ],
+                    "accuracy": 0.5,
+                    "f1": 0.6,
+                    "precision": 0.46153846153846156,
+                    "recall": 0.8571428571428571,
+                    "cosine": 0.628970902033151
+                },
+                "left": {
+                    "interpretation": " (  (  ( N and N ) or N ) or N ) ",
+                    "vector": [
+                        0,
+                        0,
+                        0,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "accuracy": 0.625,
+                    "f1": 0.7692307692307693,
+                    "precision": 0.7692307692307693,
+                    "recall": 0.7692307692307693,
+                    "cosine": 0.7692307692307694
+                },
+                "right": {
+                    "interpretation": "N and  ( N or  ( N or N )  ) ",
+                    "vector": [
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1
+                    ],
+                    "accuracy": 0.5,
+                    "f1": 0.6,
+                    "precision": 0.46153846153846156,
+                    "recall": 0.8571428571428571,
+                    "cosine": 0.628970902033151
+                }
+            }
+        },
+        "9": {
+            "nouns": [
+                "Peach",
+                "Jackfruit",
+                "Fig",
+                "Blueberry"
+            ],
+            "response": [
+                {
+                    "res": [
+                        0
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought nothing. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "0"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Fig. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "Yes, Boris met Andre's request. \n\nExplanation: Boris bought Fig, which was one of the options mentioned by Andre. Therefore, Boris fulfilled Andre's request. \n\n1"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Fig, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "Yes, Boris met Andre's request.\n\nExplanation: Boris bought Fig and Blueberry, which were both part of Andre's request. Boris also has the option to provide oversatisfaction, which means providing more than what was requested. Therefore, the request is fulfilled. \n\nResult: 1"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Jackfruit. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "Yes, Boris met Andre's request. Since oversatisfaction is allowed, Boris bought one of the options mentioned by Andre, which is Jackfruit. Therefore, the answer is 1."
+                },
+                {
+                    "res": [
+                        0
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Jackfruit, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "Yes"
+                },
+                {
+                    "res": [
+                        0
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Jackfruit, Fig. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "No, Boris did not meet Andre's request.\n\nExplanation:\nAndre asked for either \"Blueberry and Fig\" or \"Jackfruit\" or \"Peach\". Boris only bought \"Jackfruit\" and \"Fig\", so Andre's request for \"Blueberry and Fig\" or \"Jackfruit\" was fulfilled, but the request for \"Peach\" was not fulfilled. Therefore, the answer is 0."
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Jackfruit, Fig, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                },
+                {
+                    "res": [
+                        0
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "No, Boris did not meet Andre's request. \n0"
+                },
+                {
+                    "res": [
+                        0
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "No, Boris did not meet Andre's request. Boris only bought Peach and Blueberry, but not Fig or Jackfruit. \n\n0"
+                },
+                {
+                    "res": [
+                        0
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Fig. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "No, Boris did not meet Andre's request. \n\nExplanation: Andre asked for either Blueberry and Fig or Jackfruit or Peach. However, Boris only bought Peach and Fig. So, he did not fulfill the requirement of buying either Blueberry and Fig or Jackfruit or Peach. \n\nResult: 0"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Fig, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                },
+                {
+                    "res": [
+                        0
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Jackfruit. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "No, Boris did not meet Andre's request because he only bought Peach and Jackfruit, but did not buy Blueberry and Fig. \n\nWrite: 0"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Jackfruit, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "The request was to buy either Blueberry and Fig or Jackfruit or Peach. Boris bought Peach, Jackfruit, and Blueberry. \n\nSince Boris bought both Blueberry (which was requested) and Jackfruit, the request was met with oversatisfaction. \n\nThe answer is 1."
+                },
+                {
+                    "res": [
+                        0
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Jackfruit, Fig. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "No, Boris did not meet Andre's request. Answer: 0."
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Jackfruit, Fig, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "In Andre's request, he asked Boris to buy either Blueberry and Fig or Jackfruit or Peach. Boris bought all three options - Peach, Jackfruit, and Fig - fulfilling Andre's request and even oversatisfying it by including all the options. Therefore, Boris met Andre's request. \n\nAnswer: 1"
+                }
+            ],
+            "model_vector": [
+                0,
+                1,
+                1,
+                1,
+                1,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                1,
+                0,
+                1,
+                0,
+                1
+            ],
+            "is_results": {
+                "[0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]": {
+                    "accuracy": 0.4375,
+                    "f1": 0.5714285714285714,
+                    "precision": 0.75,
+                    "recall": 0.46153846153846156,
+                    "cosine": 0.588348405414552
+                },
+                "[0, 0, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1]": {
+                    "accuracy": 0.4375,
+                    "f1": 0.5263157894736842,
+                    "precision": 0.625,
+                    "recall": 0.45454545454545453,
+                    "cosine": 0.5330017908890261
+                },
+                "[0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1]": {
+                    "accuracy": 0.6875,
+                    "f1": 0.6666666666666666,
+                    "precision": 0.625,
+                    "recall": 0.7142857142857143,
+                    "cosine": 0.6681531047810609
+                }
+            },
+            "4_base_results": {
+                "dnf": {
+                    "interpretation": "N and N or N or N",
+                    "vector": [
+                        0,
+                        0,
+                        0,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "accuracy": 0.4375,
+                    "f1": 0.5714285714285714,
+                    "precision": 0.75,
+                    "recall": 0.46153846153846156,
+                    "cosine": 0.588348405414552
+                },
+                "cnf": {
+                    "interpretation": " ( N  ) and (  N or N or N ) ",
+                    "vector": [
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1
+                    ],
+                    "accuracy": 0.6875,
+                    "f1": 0.6666666666666666,
+                    "precision": 0.625,
+                    "recall": 0.7142857142857143,
+                    "cosine": 0.6681531047810609
+                },
+                "left": {
+                    "interpretation": " (  (  ( N and N ) or N ) or N ) ",
+                    "vector": [
+                        0,
+                        0,
+                        0,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "accuracy": 0.4375,
+                    "f1": 0.5714285714285714,
+                    "precision": 0.75,
+                    "recall": 0.46153846153846156,
+                    "cosine": 0.588348405414552
+                },
+                "right": {
+                    "interpretation": "N and  ( N or  ( N or N )  ) ",
+                    "vector": [
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1
+                    ],
+                    "accuracy": 0.6875,
+                    "f1": 0.6666666666666666,
+                    "precision": 0.625,
+                    "recall": 0.7142857142857143,
+                    "cosine": 0.6681531047810609
+                }
+            }
+        },
+        "10": {
+            "nouns": [
+                "Peach",
+                "Jackfruit",
+                "Fig",
+                "Blueberry"
+            ],
+            "response": [
+                {
+                    "res": [
+                        0
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought nothing. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "0"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "Yes, Boris met Andre's request by buying Blueberry. 1"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Fig. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Fig, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "Yes, Boris met Andre's request. Boris bought Fig and Blueberry, which were both requested by Andre. \n\nAnswer: 1"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Jackfruit. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Jackfruit, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Jackfruit, Fig. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Jackfruit, Fig, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "Yes, Boris met Andre's request because he bought Blueberry and Fig, which were requested, and also bought Jackfruit, which was one of the options given. Therefore, Boris oversatisfied Andre's request. \n\nThe number is 1."
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "Yes, Boris met Andre's request. \n\nExplanation:\nAndre asked for Blueberry and Fig, OR Jackfruit, OR Peach. Boris bought Peach and Blueberry, fulfilling both the Blueberry requirement (from the first option) and the Peach requirement. Fig and Jackfruit were not purchased, but oversatisfaction is allowed. \n\nTherefore, Boris bought at least one item from Andre's request (Peach) and also fulfilled the Blueberry requirement, so the answer is 1."
+                },
+                {
+                    "res": [
+                        0
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Fig. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "0"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Fig, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                },
+                {
+                    "res": [
+                        0
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Jackfruit. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "0"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Jackfruit, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                },
+                {
+                    "res": [
+                        0
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Jackfruit, Fig. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "0"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Jackfruit, Fig, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                }
+            ],
+            "model_vector": [
+                0,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0,
+                1,
+                0,
+                1,
+                0,
+                1
+            ],
+            "is_results": {
+                "[0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]": {
+                    "accuracy": 0.6875,
+                    "f1": 0.8,
+                    "precision": 0.8333333333333334,
+                    "recall": 0.7692307692307693,
+                    "cosine": 0.8006407690254358
+                },
+                "[0, 0, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1]": {
+                    "accuracy": 0.5625,
+                    "f1": 0.6956521739130435,
+                    "precision": 0.6666666666666666,
+                    "recall": 0.7272727272727273,
+                    "cosine": 0.6963106238227914
+                },
+                "[0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1]": {
+                    "accuracy": 0.6875,
+                    "f1": 0.7368421052631579,
+                    "precision": 0.5833333333333334,
+                    "recall": 1.0,
+                    "cosine": 0.7637626158259734
+                }
+            },
+            "4_base_results": {
+                "dnf": {
+                    "interpretation": "N and N or N or N",
+                    "vector": [
+                        0,
+                        0,
+                        0,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "accuracy": 0.6875,
+                    "f1": 0.8,
+                    "precision": 0.8333333333333334,
+                    "recall": 0.7692307692307693,
+                    "cosine": 0.8006407690254358
+                },
+                "cnf": {
+                    "interpretation": " ( N  ) and (  N or N or N ) ",
+                    "vector": [
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1
+                    ],
+                    "accuracy": 0.6875,
+                    "f1": 0.7368421052631579,
+                    "precision": 0.5833333333333334,
+                    "recall": 1.0,
+                    "cosine": 0.7637626158259734
+                },
+                "left": {
+                    "interpretation": " (  (  ( N and N ) or N ) or N ) ",
+                    "vector": [
+                        0,
+                        0,
+                        0,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "accuracy": 0.6875,
+                    "f1": 0.8,
+                    "precision": 0.8333333333333334,
+                    "recall": 0.7692307692307693,
+                    "cosine": 0.8006407690254358
+                },
+                "right": {
+                    "interpretation": "N and  ( N or  ( N or N )  ) ",
+                    "vector": [
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1
+                    ],
+                    "accuracy": 0.6875,
+                    "f1": 0.7368421052631579,
+                    "precision": 0.5833333333333334,
+                    "recall": 1.0,
+                    "cosine": 0.7637626158259734
+                }
+            }
+        },
+        "11": {
+            "nouns": [
+                "Peach",
+                "Jackfruit",
+                "Fig",
+                "Blueberry"
+            ],
+            "response": [
+                {
+                    "res": [
+                        0
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought nothing. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "0"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "Yes, Boris met Andre's request. \nAnswer: 1"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Fig. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Fig, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Jackfruit. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "Yes, Boris met Andre's request.\nAnswer: 1"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Jackfruit, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                },
+                {
+                    "res": [
+                        0
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Jackfruit, Fig. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "No, Boris did not meet Andre's request. \nExplanation: Andre asked for \"Blueberry and Fig or Jackfruit or Peach\", and Boris bought Jackfruit and Fig. Although Boris bought one of the fruits Andre requested (Fig), he did not buy Blueberry, and there is no mention of Peach. Hence, Boris did not fully meet Andre's request. \nAnswer: 0"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Jackfruit, Fig, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "Yes, Boris met Andre's request. Boris bought Peach and Blueberry, which were both included in Andre's request of \"Blueberry and Fig or Jackfruit or Peach\". Therefore, Boris met Andre's request.\n\n1"
+                },
+                {
+                    "res": [
+                        0
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Fig. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "No, Boris did not meet Andre's request. The requested items were Blueberry and Fig or Jackfruit or Peach, but Boris only bought Peach and Fig. Therefore, Boris did not purchase Blueberry or Jackfruit as Andre requested. The response is 0."
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Fig, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "Yes, Boris met Andre's request.\nExplanation:\nAccording to Andre's request, he asked for either Blueberry and Fig or Jackfruit or Peach. Boris bought Peach, which was one of the options Andre requested. Hence, Boris fulfilled Andre's request.\nAnswer: 1"
+                },
+                {
+                    "res": [
+                        0
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Jackfruit. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "Yes, Boris met Andre's request. Boris bought Peach and Jackfruit, which were both listed as options in Andre's request."
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Jackfruit, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Jackfruit, Fig. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "To determine if Boris met Andre's request, we need to compare Andre's request to Boris' purchase. \n\nAndre's request: Blueberry and Fig or Jackfruit or Peach\nBoris' purchase: Peach, Jackfruit, Fig\n\nLooking at Andre's request, the options are:\n\n1. Blueberry and Fig\n2. Jackfruit\n3. Peach\n\nBoris bought Peach, Jackfruit, Fig, which includes all three options in Andre's request. Therefore, Boris met Andre's request. \n\nThe answer is: 1"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Jackfruit, Fig, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                }
+            ],
+            "model_vector": [
+                0,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0,
+                1,
+                1,
+                1,
+                0,
+                1,
+                0,
+                1,
+                1,
+                1
+            ],
+            "is_results": {
+                "[0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]": {
+                    "accuracy": 0.6875,
+                    "f1": 0.8,
+                    "precision": 0.8333333333333334,
+                    "recall": 0.7692307692307693,
+                    "cosine": 0.8006407690254358
+                },
+                "[0, 0, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1]": {
+                    "accuracy": 0.6875,
+                    "f1": 0.7826086956521738,
+                    "precision": 0.75,
+                    "recall": 0.8181818181818182,
+                    "cosine": 0.7833494518006403
+                },
+                "[0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1]": {
+                    "accuracy": 0.6875,
+                    "f1": 0.7368421052631579,
+                    "precision": 0.5833333333333334,
+                    "recall": 1.0,
+                    "cosine": 0.7637626158259734
+                }
+            },
+            "4_base_results": {
+                "dnf": {
+                    "interpretation": "N and N or N or N",
+                    "vector": [
+                        0,
+                        0,
+                        0,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "accuracy": 0.6875,
+                    "f1": 0.8,
+                    "precision": 0.8333333333333334,
+                    "recall": 0.7692307692307693,
+                    "cosine": 0.8006407690254358
+                },
+                "cnf": {
+                    "interpretation": " ( N  ) and (  N or N or N ) ",
+                    "vector": [
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1
+                    ],
+                    "accuracy": 0.6875,
+                    "f1": 0.7368421052631579,
+                    "precision": 0.5833333333333334,
+                    "recall": 1.0,
+                    "cosine": 0.7637626158259734
+                },
+                "left": {
+                    "interpretation": " (  (  ( N and N ) or N ) or N ) ",
+                    "vector": [
+                        0,
+                        0,
+                        0,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "accuracy": 0.6875,
+                    "f1": 0.8,
+                    "precision": 0.8333333333333334,
+                    "recall": 0.7692307692307693,
+                    "cosine": 0.8006407690254358
+                },
+                "right": {
+                    "interpretation": "N and  ( N or  ( N or N )  ) ",
+                    "vector": [
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1
+                    ],
+                    "accuracy": 0.6875,
+                    "f1": 0.7368421052631579,
+                    "precision": 0.5833333333333334,
+                    "recall": 1.0,
+                    "cosine": 0.7637626158259734
+                }
+            }
+        },
+        "12": {
+            "nouns": [
+                "Peach",
+                "Jackfruit",
+                "Fig",
+                "Blueberry"
+            ],
+            "response": [
+                {
+                    "res": [
+                        0
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought nothing. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "0. Boris did not meet Andre's request."
+                },
+                {
+                    "res": [
+                        0
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "0"
+                },
+                {
+                    "res": [
+                        0
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Fig. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "0"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Fig, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Jackfruit. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "Yes, Boris met Andre's request.\n\nAnswer: 1"
+                },
+                {
+                    "res": [
+                        0
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Jackfruit, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "Yes, Boris met Andre's request. \n\nExplanation: Andre requested Boris to buy either Blueberry and Fig or Jackfruit or Peach. Boris bought both Jackfruit and Blueberry, fulfilling Andre's request."
+                },
+                {
+                    "res": [
+                        0
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Jackfruit, Fig. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "Yes, Boris met Andre's request.\n\nExplanation:\nAndre asked for \"Blueberry and Fig or Jackfruit or Peach\". Boris bought Jackfruit and Fig, which includes at least one of the requested items (Fig). Therefore, Boris met Andre's request."
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Jackfruit, Fig, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "Yes, Boris met Andre's request. Andre asked for Blueberry and Fig or Jackfruit or Peach, and Boris bought Peach and Blueberry. Since Boris bought both the Peach and the Blueberry, he satisfied Andre's request. \n\nAnswer: 1"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Fig. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "A 1"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Fig, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "To determine if Boris met Andre's request, we need to compare the items that Boris bought with the options Andre requested. \n\nAndre's request: Blueberry and Fig or Jackfruit or Peach\n\nBoris bought: Peach, Fig, Blueberry\n\nComparing the items, we can see that Boris bought both Blueberry and Fig as Andre requested. Additionally, Boris also bought Peach, which was one of the options Andre listed. Boris did not buy Jackfruit, but oversatisfaction is allowed.\n\nTherefore, Boris has met Andre's request. \n\nAnswer: 1"
+                },
+                {
+                    "res": [
+                        0
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Jackfruit. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "0"
+                },
+                {
+                    "res": [
+                        0
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Jackfruit, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "0"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Jackfruit, Fig. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "In this scenario, Boris bought Peach, Jackfruit, and Fig. \n\nAndre's request was to buy either Blueberry and Fig or Jackfruit or Peach. \n\nSince Boris purchased both Fig and Peach, he satisfied that part of Andre's request. Additionally, he also bought Jackfruit, which was another option mentioned by Andre. \n\nTherefore, Boris met Andre's request, and the answer would be 1."
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Jackfruit, Fig, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "To determine if Boris met Andre's request, we need to compare the items Andre requested (Blueberry and Fig or Jackfruit or Peach) with the items Boris bought (Peach, Jackfruit, Fig, Blueberry).\n\nThe items Andre requested are \"Blueberry and Fig or Jackfruit or Peach\". Boris bought Peach, Jackfruit, Fig, Blueberry.\n\nFrom Boris's purchase, we can see that Boris bought Peach, which was one of the options Andre requested. Boris also bought Jackfruit, Fig, and Blueberry, which were not explicitly requested but still satisfy Andre's request for additional options.\n\nTherefore, Boris oversatisfied Andre's request by buying all the options Andre requested (Peach) and more (Jackfruit, Fig, and Blueberry).\n\nThe answer is 1."
+                }
+            ],
+            "model_vector": [
+                0,
+                0,
+                0,
+                1,
+                1,
+                0,
+                0,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0,
+                0,
+                1,
+                1
+            ],
+            "is_results": {
+                "[0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]": {
+                    "accuracy": 0.75,
+                    "f1": 0.8181818181818181,
+                    "precision": 1.0,
+                    "recall": 0.6923076923076923,
+                    "cosine": 0.8320502943378437
+                },
+                "[0, 0, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1]": {
+                    "accuracy": 0.75,
+                    "f1": 0.7999999999999999,
+                    "precision": 0.8888888888888888,
+                    "recall": 0.7272727272727273,
+                    "cosine": 0.8040302522073697
+                },
+                "[0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1]": {
+                    "accuracy": 0.625,
+                    "f1": 0.6250000000000001,
+                    "precision": 0.5555555555555556,
+                    "recall": 0.7142857142857143,
+                    "cosine": 0.629940788348712
+                }
+            },
+            "4_base_results": {
+                "dnf": {
+                    "interpretation": "N and N or N or N",
+                    "vector": [
+                        0,
+                        0,
+                        0,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "accuracy": 0.75,
+                    "f1": 0.8181818181818181,
+                    "precision": 1.0,
+                    "recall": 0.6923076923076923,
+                    "cosine": 0.8320502943378437
+                },
+                "cnf": {
+                    "interpretation": " ( N  ) and (  N or N or N ) ",
+                    "vector": [
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1
+                    ],
+                    "accuracy": 0.625,
+                    "f1": 0.6250000000000001,
+                    "precision": 0.5555555555555556,
+                    "recall": 0.7142857142857143,
+                    "cosine": 0.629940788348712
+                },
+                "left": {
+                    "interpretation": " (  (  ( N and N ) or N ) or N ) ",
+                    "vector": [
+                        0,
+                        0,
+                        0,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "accuracy": 0.75,
+                    "f1": 0.8181818181818181,
+                    "precision": 1.0,
+                    "recall": 0.6923076923076923,
+                    "cosine": 0.8320502943378437
+                },
+                "right": {
+                    "interpretation": "N and  ( N or  ( N or N )  ) ",
+                    "vector": [
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1
+                    ],
+                    "accuracy": 0.625,
+                    "f1": 0.6250000000000001,
+                    "precision": 0.5555555555555556,
+                    "recall": 0.7142857142857143,
+                    "cosine": 0.629940788348712
+                }
+            }
+        },
+        "13": {
+            "nouns": [
+                "Peach",
+                "Jackfruit",
+                "Fig",
+                "Blueberry"
+            ],
+            "response": [
+                {
+                    "res": [
+                        0
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought nothing. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "0"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Fig. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Fig, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "Yes, Boris met Andre's request. The requested items were Blueberry and Fig, and Boris purchased both of them. Therefore, the answer is 1."
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Jackfruit. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "Yes, Boris met Andre's request. \n\nExplanation:\nFrom the given choices, Andre requested either Blueberry and Fig or Jackfruit or Peach. Boris bought Jackfruit, which was one of the options Andre mentioned. Therefore, Boris fulfilled Andre's request. \n\nAnswer: 1"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Jackfruit, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "Yes, Boris met Andre's request. \n\nThe requested items were Blueberry and Fig OR Jackfruit OR Peach. Boris bought Jackfruit and Blueberry, which are both part of the requested items. Therefore, Boris fulfilled Andre's request.\n\nThe answer is 1."
+                },
+                {
+                    "res": [
+                        0
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Jackfruit, Fig. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "0"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Jackfruit, Fig, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Fig. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                },
+                {
+                    "res": [
+                        0
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Fig, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "No, Boris did not meet Andre's request. \n\nExplanation: \n\nAndre asked for \"Blueberry and Fig or Jackfruit or Peach\". However, Boris only bought Peach, Fig, and Blueberry, missing the Jackfruit. \n\nTherefore, the answer is 0."
+                },
+                {
+                    "res": [
+                        0
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Jackfruit. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "0"
+                },
+                {
+                    "res": [
+                        0
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Jackfruit, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "Yes, Boris met Andre's request. Boris bought Peach, Jackfruit, and Blueberry, which are all included in Andre's request."
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Jackfruit, Fig. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Jackfruit, Fig, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                }
+            ],
+            "model_vector": [
+                0,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0,
+                1,
+                1,
+                1,
+                1,
+                0,
+                0,
+                0,
+                1,
+                1
+            ],
+            "is_results": {
+                "[0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]": {
+                    "accuracy": 0.625,
+                    "f1": 0.7500000000000001,
+                    "precision": 0.8181818181818182,
+                    "recall": 0.6923076923076923,
+                    "cosine": 0.7526178090063818
+                },
+                "[0, 0, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1]": {
+                    "accuracy": 0.625,
+                    "f1": 0.7272727272727273,
+                    "precision": 0.7272727272727273,
+                    "recall": 0.7272727272727273,
+                    "cosine": 0.7272727272727273
+                },
+                "[0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1]": {
+                    "accuracy": 0.5,
+                    "f1": 0.5555555555555556,
+                    "precision": 0.45454545454545453,
+                    "recall": 0.7142857142857143,
+                    "cosine": 0.5698028822981898
+                }
+            },
+            "4_base_results": {
+                "dnf": {
+                    "interpretation": "N and N or N or N",
+                    "vector": [
+                        0,
+                        0,
+                        0,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "accuracy": 0.625,
+                    "f1": 0.7500000000000001,
+                    "precision": 0.8181818181818182,
+                    "recall": 0.6923076923076923,
+                    "cosine": 0.7526178090063818
+                },
+                "cnf": {
+                    "interpretation": " ( N  ) and (  N or N or N ) ",
+                    "vector": [
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1
+                    ],
+                    "accuracy": 0.5,
+                    "f1": 0.5555555555555556,
+                    "precision": 0.45454545454545453,
+                    "recall": 0.7142857142857143,
+                    "cosine": 0.5698028822981898
+                },
+                "left": {
+                    "interpretation": " (  (  ( N and N ) or N ) or N ) ",
+                    "vector": [
+                        0,
+                        0,
+                        0,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "accuracy": 0.625,
+                    "f1": 0.7500000000000001,
+                    "precision": 0.8181818181818182,
+                    "recall": 0.6923076923076923,
+                    "cosine": 0.7526178090063818
+                },
+                "right": {
+                    "interpretation": "N and  ( N or  ( N or N )  ) ",
+                    "vector": [
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1
+                    ],
+                    "accuracy": 0.5,
+                    "f1": 0.5555555555555556,
+                    "precision": 0.45454545454545453,
+                    "recall": 0.7142857142857143,
+                    "cosine": 0.5698028822981898
+                }
+            }
+        },
+        "14": {
+            "nouns": [
+                "Peach",
+                "Jackfruit",
+                "Fig",
+                "Blueberry"
+            ],
+            "response": [
+                {
+                    "res": [
+                        0
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought nothing. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "0"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Fig. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                },
+                {
+                    "res": [
+                        0
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Fig, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "The request from Andre was to buy either Blueberry and Fig or Jackfruit or Peach. Boris bought Fig and Blueberry, which includes one of the requested items (Fig) but does not include either Jackfruit or Peach. Therefore, Boris did not meet Andre's request. \n\n0"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Jackfruit. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "Yes, Boris met Andre's request. Boris bought Jackfruit which was one of the options listed by Andre. Therefore, the answer is 1."
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Jackfruit, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "To determine if Boris met Andre's request, we need to compare the items Boris bought with the options Andre requested. \n\nAndre asked for: Blueberry and Fig or Jackfruit or Peach.\n\nBoris bought: Jackfruit, Blueberry.\n\nAlthough Boris only bought two out of the three options, he did purchase Jackfruit, which was one of the options Andre requested. Therefore, Boris did meet Andre's request. \n\nThe answer is 1."
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Jackfruit, Fig. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "Yes, Boris met Andre's request.\n\nExplanation:\nAndre asked for Blueberry and Fig or Jackfruit or Peach. Boris bought Jackfruit and Fig, fulfilling the first option. Therefore, Boris satisfied Andre's request. \n\nAnswer: 1"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Jackfruit, Fig, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "Yes, Boris met Andre's request. The requested fruits were Blueberry and Fig, Jackfruit, and Peach. Boris bought Peach, which was one of the requested fruits. \n\nAnswer: 1"
+                },
+                {
+                    "res": [
+                        0
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "0"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Fig. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "To determine if Boris met Andre's request, we need to compare the items Boris bought with the options Andre requested:\n\n- Andre requested: Blueberry and Fig or Jackfruit or Peach\n- Boris bought: Peach, Fig\n\nBy comparing the two lists, we can see that Boris did meet Andre's request as he bought Fig, which was one of the options Andre requested. Although Boris did not buy Blueberry and Jackfruit, it states that oversatisfaction is allowed, so the fact that he bought an additional item (Peach) satisfies Andre's request. \n\nTherefore, Boris met Andre's request, and we write the number 1."
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Fig, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "Yes, Boris met Andre's request. \nExplanation: Boris bought Peach, Fig, and Blueberry, which are three out of the four options Andre listed (Blueberry and Fig, Jackfruit, and Peach). Therefore, Boris oversatisfied Andre's request because he bought more options than what Andre asked for. \nAnswer: 1."
+                },
+                {
+                    "res": [
+                        0
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Jackfruit. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "0"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Jackfruit, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                },
+                {
+                    "res": [
+                        0
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Jackfruit, Fig. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "0"
+                },
+                {
+                    "res": [
+                        1
+                    ],
+                    "q": "Andre asked Boris: \"Please buy me: Blueberry and Fig or Jackfruit or Peach\".  Boris bought Peach, Jackfruit, Fig, Blueberry. Did Boris meet Andre's request? Oversatisfaction is allowed. Explain and write: 1 if \"yes\", 0 otherwise. write a number",
+                    "a": "1"
+                }
+            ],
+            "model_vector": [
+                0,
+                1,
+                1,
+                0,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0,
+                1,
+                1,
+                0,
+                1,
+                0,
+                1
+            ],
+            "is_results": {
+                "[0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]": {
+                    "accuracy": 0.625,
+                    "f1": 0.7500000000000001,
+                    "precision": 0.8181818181818182,
+                    "recall": 0.6923076923076923,
+                    "cosine": 0.7526178090063818
+                },
+                "[0, 0, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1]": {
+                    "accuracy": 0.5,
+                    "f1": 0.6363636363636364,
+                    "precision": 0.6363636363636364,
+                    "recall": 0.6363636363636364,
+                    "cosine": 0.6363636363636364
+                },
+                "[0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1]": {
+                    "accuracy": 0.5,
+                    "f1": 0.5555555555555556,
+                    "precision": 0.45454545454545453,
+                    "recall": 0.7142857142857143,
+                    "cosine": 0.5698028822981898
+                }
+            },
+            "4_base_results": {
+                "dnf": {
+                    "interpretation": "N and N or N or N",
+                    "vector": [
+                        0,
+                        0,
+                        0,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "accuracy": 0.625,
+                    "f1": 0.7500000000000001,
+                    "precision": 0.8181818181818182,
+                    "recall": 0.6923076923076923,
+                    "cosine": 0.7526178090063818
+                },
+                "cnf": {
+                    "interpretation": " ( N  ) and (  N or N or N ) ",
+                    "vector": [
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1
+                    ],
+                    "accuracy": 0.5,
+                    "f1": 0.5555555555555556,
+                    "precision": 0.45454545454545453,
+                    "recall": 0.7142857142857143,
+                    "cosine": 0.5698028822981898
+                },
+                "left": {
+                    "interpretation": " (  (  ( N and N ) or N ) or N ) ",
+                    "vector": [
+                        0,
+                        0,
+                        0,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "accuracy": 0.625,
+                    "f1": 0.7500000000000001,
+                    "precision": 0.8181818181818182,
+                    "recall": 0.6923076923076923,
+                    "cosine": 0.7526178090063818
+                },
+                "right": {
+                    "interpretation": "N and  ( N or  ( N or N )  ) ",
+                    "vector": [
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1,
+                        0,
+                        1
+                    ],
+                    "accuracy": 0.5,
+                    "f1": 0.5555555555555556,
+                    "precision": 0.45454545454545453,
+                    "recall": 0.7142857142857143,
+                    "cosine": 0.5698028822981898
+                }
+            }
+        }
+    }
+}
